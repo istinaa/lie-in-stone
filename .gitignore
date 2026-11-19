@@ -1,0 +1,5 @@
+.godot/
+secrets.cfg
+
+# 原始美术素材（处理后的版本在 assets/）
+Pics/

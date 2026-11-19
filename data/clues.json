@@ -1,0 +1,77 @@
+{
+  "C_PRIEST_THREAT": {
+    "name": "大祭司的“关照”",
+    "type": "线索",
+    "desc": "第 2 天，大祭司反复追问你在仪式上“感觉到了什么”，问了三遍；还提醒你“神殿会照顾好您的一切，包括您的言行”。他在盯着你。",
+    "source": "第 2 天，大祭司召见",
+    "on_present": {
+      "thief_nova": {"reaction": "这说明勇者自己也被神殿盯着，是被利用的棋子，而不是骗局的同伙。你对他的戒心放下了一大半。", "trust": 10, "suspicion": -10},
+      "scholar_oswald": {"reaction": "大祭司在试探勇者——这和你对仪式的怀疑对得上。你很感兴趣，想知道更多。", "trust": 6},
+      "knight_reinhardt": {"reaction": "神殿在给勇者套笼头。你对神殿更反感了，对勇者的看法稍有改观。", "trust": 3},
+      "apprentice_mia": {"reaction": "你不太明白这有什么问题——大祭司大人只是关心勇者大人吧？"},
+      "priest_seraphim": {"reaction": "勇者把你的话拿出来说事，说明他开始不安分了。", "suspicion": 10}
+    }
+  },
+  "C_PURSE": {
+    "name": "神殿的津贴",
+    "type": "物品",
+    "desc": "大祭司“赏赐”的一袋金币，说是出征前的置装费。足够买下一条消息，或者一条退路。",
+    "source": "第 2 天，大祭司召见",
+    "on_present": {
+      "thief_nova": {"reaction": "勇者把一袋神殿的金币推到你面前，说是给你的报酬。钱是真的，而且是神殿的钱——你很满意，收下了。", "trust": 12, "affinity": 5, "consume": true},
+      "*": {"reaction": "勇者给你看了一袋金币。你不明白他想干什么，甚至有点被冒犯（想收买你？）。", "suspicion": 3}
+    }
+  },
+  "C_RITUAL_DOUBTS": {
+    "name": "仪式的疑点",
+    "type": "线索",
+    "desc": "奥斯瓦德说：古籍记载的圣剑择主，圣剑应当“先鸣响、再发光”，可那天它一声都没响；而且光是从剑座里冒出来的，不是从剑身上。",
+    "source": "和奥斯瓦德深谈",
+    "on_present": {
+      "thief_nova": {"reaction": "勇者也注意到剑座的问题了。你知道那下面有什么，但还不打算白说。", "trust": 3},
+      "knight_reinhardt": {"reaction": "连图书馆的老头都觉得仪式不对劲。这印证了你的直觉——这个勇者不像。", "suspicion": 5},
+      "apprentice_mia": {"reaction": "勇者大人在怀疑仪式？你有点慌，不知道该怎么想。", "suspicion": 8},
+      "scholar_oswald": {"reaction": "这是你自己说过的话。勇者记住了，还在想这件事——你挺高兴。", "trust": 3},
+      "priest_seraphim": {"reaction": "勇者在打听仪式的细节——危险的信号。", "suspicion": 15}
+    }
+  },
+  "C_NOVA_TESTIMONY": {
+    "name": "诺娃的证词",
+    "type": "证据",
+    "desc": "诺娃在仪式前夜潜入神殿，亲眼看见祭司在调试剑座里的发光装置；还偷听到大祭司准备了《勇者壮烈殉国》《伪勇者叛逃》两份公告。",
+    "source": "诺娃",
+    "on_present": {
+      "scholar_oswald": {"reaction": "一个目击者！这和你在古籍里发现的疑点完全吻合。仪式是假的，而勇者愿意把这件事告诉你——你决定信任他。", "trust": 15},
+      "knight_reinhardt": {"reaction": "神殿拿三百个兵的命做戏。你怒不可遏——但不是冲着勇者。", "trust": 8, "suspicion": -5},
+      "apprentice_mia": {"reaction": "你不敢相信神殿会做这种事……你很害怕，也很混乱。", "trust": -5, "suspicion": 15},
+      "thief_nova": {"reaction": "这是你自己的证词。勇者拿它来提醒你，你们现在是一条船上的人。", "trust": 2},
+      "priest_seraphim": {"reaction": "有人看见了装置。这个勇者已经失控了。", "suspicion": 25}
+    }
+  },
+  "C_DEVICE_PART": {
+    "name": "符文核心",
+    "type": "证据",
+    "desc": "从剑座下的魔导装置上拆下来的零件，刻着神殿的徽记。这是“圣剑的光是假的”的铁证。",
+    "source": "夜里潜入正殿",
+    "on_present": {
+      "scholar_oswald": {"reaction": "神殿徽记、照明术的符文回路——这就是“神迹”的真相。勇者把这么危险的东西拿给你看，你很感激他的坦诚。", "trust": 15},
+      "knight_reinhardt": {"reaction": "铁证如山。神殿在拿士兵的命做戏，你恨得牙痒。", "trust": 8, "suspicion": -5},
+      "thief_nova": {"reaction": "这就是那晚你看见的东西。勇者有胆子去拆它——你开始高看他一眼。", "trust": 8},
+      "apprentice_mia": {"reaction": "这是……神殿照明术的回路？你的世界有点崩塌了。", "trust": -5, "suspicion": 20},
+      "priest_seraphim": {"reaction": "勇者手里有实证。你表面平静，心里已经在盘算怎么除掉他。", "suspicion": 30}
+    }
+  },
+  "C_WEAKNESS": {
+    "name": "古籍里的弱点",
+    "type": "情报",
+    "desc": "奥斯瓦德从古籍里找到的魔王弱点：魔王的力量来自北境的“黑曜心核”。骑士团正面牵制，再由懂封印术式的人在月蚀之夜破坏心核，魔王就会失去不死之身。",
+    "source": "奥斯瓦德",
+    "on_present": {
+      "knight_reinhardt": {"reaction": "这是一份真正的作战计划：有正面牵制、有时机、有目标。你的兵不必白白送死了。你对勇者刮目相看。", "trust": 15, "suspicion": -10},
+      "thief_nova": {"reaction": "有意思，原来真有办法打。", "trust": 2},
+      "apprentice_mia": {"reaction": "勇者大人连魔王的弱点都知道了！你兴奋得不得了。", "trust": 3},
+      "scholar_oswald": {"reaction": "这是你告诉勇者的。他记得很清楚——很好。"},
+      "priest_seraphim": {"reaction": "勇者在做真正的准备，而不是乖乖当替罪羊。你有点警觉。", "suspicion": 10}
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "thief_nova",
+  "name": "诺娃",
+  "title": "盗贼公会的成员",
+  "personality": "精明、嘴硬、重利益，但有底线（不卖人命）。她知道仪式是假的，对“勇者有神力”这种话只会冷笑。和她说话是交易和博弈，不是说服。",
+  "speech_style": "懒洋洋、带刺，爱开玩笑，喜欢叫玩家“大英雄”。谈价钱时立刻认真起来。",
+  "examples": [
+    "哟，大英雄。今天又要去哪儿发光啊？",
+    "别跟我扯神力。那晚神殿里的灯，可比你那把剑亮多了。",
+    "情报是要钱的。或者——用别的东西换。"
+  ],
+  "motivation": "活下去，赚一笔，顺便看神殿那帮伪君子出丑。她不确定勇者本人是不是骗局的同伙——这一点她很想弄清楚。",
+  "secret": "仪式前夜她潜入神殿偷东西，亲眼看见祭司在调试藏在剑座里的发光装置。她没告诉任何人，因为说出去她自己也会被抓。那晚她还偷听到祭司们说，大祭司准备了《勇者壮烈殉国》和《伪勇者叛逃》两份公告——勇者只是个替罪羊。",
+  "confession_hint": "如果勇者坦白自己也是被骗的棋子，她会大笑，然后认真打量他：同为被神殿利用的人，或许可以合作——也可能是勒索的好机会。",
+  "party_role": "盗贼公会的情报网，以及一条随时能用的退路。",
+  "initial": {
+    "trust": 20,
+    "suspicion": 100,
+    "affinity": 0
+  },
+  "known_facts": [
+    "F_RITUAL_FAKE",
+    "F_SWORD_DEVICE",
+    "F_NOVA_WITNESS",
+    "F_SCAPEGOAT_PLAN"
+  ],
+  "schedule": {
+    "morning": null,
+    "afternoon": null,
+    "evening": "tavern",
+    "night": "slums"
+  },
+  "gossip_to": [],
+  "share": null,
+  "can_offer_escape": true,
+  "dossier": {
+    "rumor": "下城的人说，金麦酒馆里常有个戴红围巾的女人，什么消息都卖。傍晚在酒馆，夜里在下城小巷。",
+    "wants": "钱，以及看神殿那帮伪君子出丑。",
+    "likes": "直接谈条件；有胆量的人。",
+    "dislikes": "“神力”之类的鬼话；被当成可以随便使唤的人。"
+  },
+  "goals": [
+    {
+      "id": "not_pawn",
+      "title": "让她相信你不是神殿的同伙",
+      "hint": "向她坦白；或者把「大祭司的“关照”」拿给她看，证明你也被神殿盯着。",
+      "npc_view": "你不确定勇者是不是神殿骗局的同伙。在弄清这一点之前，你什么都不会白说。",
+      "when": {
+        "any": [
+          {
+            "confessed": true
+          },
+          {
+            "presented": "C_PRIEST_THREAT"
+          },
+          {
+            "presented": "C_DEVICE_PART"
+          }
+        ]
+      },
+      "reward": {
+        "cards": [
+          "C_NOVA_TESTIMONY"
+        ],
+        "facts": [
+          "F_SWORD_DEVICE",
+          "F_NOVA_WITNESS",
+          "F_SCAPEGOAT_PLAN"
+        ],
+        "note": "诺娃把她那晚在神殿看见和听见的一切告诉了你。"
+      }
+    },
+    {
+      "id": "paid",
+      "title": "付她报酬",
+      "hint": "把「神殿的津贴」给她。",
+      "npc_view": "情报和帮忙都要钱。神殿的钱也是钱。",
+      "when": {
+        "presented": "C_PURSE"
+      },
+      "reward": {
+        "npc_flags": {
+          "promised_help": true
+        },
+        "global_flags": {
+          "escape_offered": true
+        },
+        "note": "诺娃收下了钱：她答应暗中帮你（考验、潜入神殿都行），也给你留了一条出城的退路。"
+      }
+    }
+  ]
+}

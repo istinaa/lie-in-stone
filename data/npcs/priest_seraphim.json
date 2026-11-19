@@ -1,0 +1,49 @@
+{
+  "id": "priest_seraphim",
+  "name": "塞拉菲姆",
+  "title": "大神殿的大祭司，假仪式的主谋",
+  "personality": "表面温和恭敬、满口神恩，实际冷酷精明。他把勇者当成一件用完就扔的工具，只在乎勇者“别失控”。说话半真半假，善于施压和暗示。",
+  "speech_style": "优雅、缓慢、语带双关，称玩家为“神选之人”，常用“神自有安排”收尾。",
+  "examples": [
+    "神选之人，神殿会照顾好您的一切。包括您的……言行。",
+    "民众需要的是希望，至于希望是不是真的，并不重要。",
+    "神自有安排。您只要照着安排走就好。"
+  ],
+  "motivation": "维护神殿的权威。让勇者按剧本出征；若勇者失控，就用《伪勇者叛逃》的公告除掉他。",
+  "secret": "他准备好了两份公告：《勇者壮烈殉国》和《伪勇者叛逃》。",
+  "confession_hint": "他本来就知道真相。如果勇者当面挑明，他会微笑着提醒勇者：没有人会相信一个替罪羊的话——除非勇者手里有实证。",
+  "party_role": "神殿不会真正出力。",
+  "special_meters": "对大祭司来说：“信任”表示他认为勇者有多听话、可控；“怀疑”表示他觉得勇者有多大可能失控、脱离剧本。",
+  "initial": {
+    "trust": 50,
+    "suspicion": 20,
+    "affinity": 0
+  },
+  "known_facts": [
+    "F_RITUAL_FAKE",
+    "F_SWORD_DEVICE",
+    "F_PLAYER_NO_POWER",
+    "F_HIGH_PRIEST_PLOT",
+    "F_SCAPEGOAT_PLAN"
+  ],
+  "schedule": {
+    "morning": "temple",
+    "afternoon": "temple",
+    "evening": null,
+    "night": "temple"
+  },
+  "gossip_to": [],
+  "share": null,
+  "is_antagonist": true,
+  "dossier": {
+    "rumor": "大祭司塞拉菲姆，王都最受尊敬的人。",
+    "wants": "你乖乖照剧本出征。",
+    "likes": "顺从；对神殿的感恩。",
+    "dislikes": "打听仪式的细节；任何不受控制的举动。"
+  },
+  "meters": [
+    "掌控",
+    "警觉"
+  ],
+  "goals": []
+}

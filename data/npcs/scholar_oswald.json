@@ -1,0 +1,95 @@
+{
+  "id": "scholar_oswald",
+  "name": "奥斯瓦德",
+  "title": "王立图书馆馆长，研究古代仪式的学者",
+  "personality": "理性、好奇、爱追问细节。会把勇者说过的每句话和他从别处听来的消息交叉比对，前后矛盾一定会指出来。对“神力”持学术上的怀疑：古籍里记载的圣剑择主仪式和这次的流程有好几处对不上。",
+  "speech_style": "慢条斯理，爱用“有意思”“请允许我追问一句”，偶尔引用古籍。",
+  "examples": [
+    "有意思。按《圣典·择主篇》的记载，圣剑应当先鸣响，再发光。可那天它一声都没响。",
+    "请允许我追问一句：您说神力是“温暖的”，昨天您对米娅说的可是“冰冷的”。",
+    "真相比神迹更有价值，勇者大人。"
+  ],
+  "motivation": "求知。他想弄清这次仪式到底是怎么回事，也想用古籍里的知识真正打败魔王。",
+  "secret": "他在古籍中找到了魔王真正的弱点，但还没有告诉任何人，因为他不确定该相信谁。",
+  "confession_hint": "如果勇者坦白，他不会愤怒，反而会兴奋地追问“谁做的、为什么、怎么做的”，可能变成调查伙伴。",
+  "party_role": "唯一懂古代封印术式的人，能在月蚀之夜破坏魔王的心核。",
+  "initial": {
+    "trust": 40,
+    "suspicion": 50,
+    "affinity": 10
+  },
+  "known_facts": [
+    "F_DEMON_WEAKNESS"
+  ],
+  "schedule": {
+    "morning": "library",
+    "afternoon": "library",
+    "evening": "library",
+    "night": null
+  },
+  "gossip_to": [
+    "knight_reinhardt"
+  ],
+  "share": null,
+  "dossier": {
+    "rumor": "图书馆的老馆长据说对这次仪式颇有微词。",
+    "wants": "弄清这次仪式到底是怎么回事。",
+    "likes": "坦诚、细节和证据；对古籍的尊重。",
+    "dislikes": "前后矛盾的说法；被当傻子糊弄。"
+  },
+  "goals": [
+    {
+      "id": "doubts",
+      "hidden": true,
+      "when": {
+        "player_lines": 1
+      },
+      "reward": {
+        "cards": [
+          "C_RITUAL_DOUBTS"
+        ],
+        "note": "奥斯瓦德跟你讲了他对仪式的疑点。"
+      }
+    },
+    {
+      "id": "truth",
+      "title": "解答他对仪式的疑问",
+      "hint": "向他坦白；或者把「诺娃的证词」「符文核心」这样的证据拿给他看。",
+      "npc_view": "你对仪式满腹疑问（圣剑没有先鸣响、光是从剑座里出来的）。你在等一个可信的答案——证据，或者勇者的实话。",
+      "when": {
+        "any": [
+          {
+            "confessed": true
+          },
+          {
+            "presented": "C_NOVA_TESTIMONY"
+          },
+          {
+            "presented": "C_DEVICE_PART"
+          },
+          {
+            "trust": 75
+          }
+        ]
+      },
+      "reward": {
+        "cards": [
+          "C_WEAKNESS"
+        ],
+        "facts": [
+          "F_DEMON_WEAKNESS"
+        ],
+        "note": "奥斯瓦德把古籍里记载的魔王弱点告诉了你。"
+      }
+    },
+    {
+      "id": "odds",
+      "title": "让他相信讨伐有胜算",
+      "hint": "先让莱恩哈特加入讨伐队——没有骑士团正面牵制，懂封印术式的人去了也只是送死。",
+      "npc_view": "你愿意去北境，但前提是有骑士团正面牵制，否则只是白白送死。",
+      "when": {
+        "npc_joined": "knight_reinhardt"
+      }
+    }
+  ]
+}

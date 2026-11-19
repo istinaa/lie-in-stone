@@ -1,0 +1,11 @@
+本目录的字体：
+- NotoSerifSC-VF.ttf  Noto Serif SC（思源宋体，Google 发布版本），可变字重
+- NotoSansSC-VF.ttf   Noto Sans SC（思源黑体，Google 发布版本），可变字重
+
+两者均为 SIL Open Font License 1.1 授权，可以随游戏一起分发，但不能单独出售字体本身。
+授权全文：https://openfontlicense.org/open-font-license-official-text/
+正式发布前，请把 OFL 授权全文（OFL.txt）一并放进本目录。
+
+字重变体（tools/make_fonts.gd 生成）：
+  serif_regular 500 / serif_bold 700 / serif_black 900
+  sans_regular 400 / sans_medium 500 / sans_bold 700
